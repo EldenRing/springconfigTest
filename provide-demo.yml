@@ -1,3 +1,20 @@
+eureka:
+    client:
+        service-url:
+            defaultZone: http://user:123456@localhost:8761/eureka/
+    instance:
+        prefer-ip-address: true
+mybatis:
+    config-locations: classpath:mybatis/mybatis-config.xml
+    mapper-locations: classpath:mybatis/mapper/*.xml
+    type-aliases-package: com.test.demo.entity
+server:
+    port: 8188
 spring:
-  profiles:
-    active: test
+    application:
+        name: provide-demo
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        password: 123456
+        url: jdbc:mysql://192.168.242.130:13306/myTest?useUnicode=true&characterEncoding=utf-8
+        username: test
